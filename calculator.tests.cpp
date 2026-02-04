@@ -25,3 +25,23 @@ TEST(CalculatorTests, AssertSubFunction)
     actualResult = sub(op1, op2);
     ASSERT_EQ(actualResult, expectedResult);
 }
+
+TEST(CalculatorTests, AssertMulFunction)
+{
+    int op1 = 10;
+    int op2 = 5;
+    int actualResult = 0;
+    int expectedResult = 50;
+    actualResult = mul(op1, op2);
+    ASSERT_EQ(actualResult, expectedResult);
+}
+
+TEST(CalculatorTests, AssertDivFunction)
+{
+    int op1 = 10;
+    int op2 = 5;
+    float actualResult = 0;
+    float expectedResult = 2.0;
+    actualResult = sub(op1, op2);
+    ASSERT_EQ(actualResult, expectedResult);
+}
