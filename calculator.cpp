@@ -21,5 +21,5 @@ long mul(int x, int y)
 float div(int x, int y)
 {
     float result = x/y;
-    return result
+    return result;
 }
