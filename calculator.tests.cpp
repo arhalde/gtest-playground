@@ -8,7 +8,7 @@ TEST(CalculatorTests,AssertAddFunction){
     int operand1=10;
     int operand2=20;
     int actualResult=0;
-    int expectedResult=30;
+    int expectedResult=40;
     //Act - invoke code under test
     actualResult=add(operand1,operand2);
     //Assert - validate measurement points
