@@ -5,3 +5,9 @@ int add(int x,int y){
     result=x+x;
     return result;
 }
+
+int sub(int x, int y)
+{
+    int result = x - y;
+    return result;
+}

@@ -15,3 +15,13 @@ TEST(CalculatorTests,AssertAddFunction){
     ASSERT_EQ(actualResult,expectedResult);
 
 }
+
+TEST(CalculatorTests, AssertSubFunction)
+{
+    int op1 = 10;
+    int op2 = 5;
+    int actualResult = 0;
+    int expectedResult = 5;
+    actualResult = sub(op1, op2);
+    ASSERT_EQ(actualResult, expectedResult);
+}
