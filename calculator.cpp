@@ -18,7 +18,7 @@ long mul(int x, int y)
     return result;
 }
 
-float div(int x, int y)
+float division(int x, int y)
 {
     float result = x/y;
     return result;
