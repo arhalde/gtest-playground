@@ -42,6 +42,6 @@ TEST(CalculatorTests, AssertDivFunction)
     int op2 = 5;
     float actualResult = 0;
     float expectedResult = 2.0;
-    actualResult = sub(op1, op2);
+    actualResult = division(op1, op2);
     ASSERT_EQ(actualResult, expectedResult);
 }
