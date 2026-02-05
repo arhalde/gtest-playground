@@ -43,7 +43,8 @@ INSTANTIATE_TEST_SUITE_P( StringCalculatorGroup, StringCalculatorTests,
 
 TEST_P(StringCalculatorTests, Tests)
 {
+    StringCalculator obj;
     const auto &data = GetParam();
-    int actualResult = add(data.inpString);
+    int actualResult = obj.Add(data.inpString);
     EXPECT_EQ(actualResult, data.expectedResult);
 }
