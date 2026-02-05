@@ -1,0 +1,49 @@
+#include <iostream>
+#include <gtest/gtest.h>
+#include "StringCalculator.h"
+
+using namespace std;
+
+struct StringCalculatorData {
+    string inpString;
+    int expectedResult;
+};
+
+class StringCalculatorTests : public testing::TestWithParam<StringCalculatorData>
+{
+    protected:
+    static void SetUpTestSuite() 
+    {
+        cout<<"TestSuite Setup"<<endl;
+    }
+
+    static void TearDownTestSuite()
+    {
+        cout<<"TestSuite Teardown"<<endl;
+    }
+
+    void SetUp() override
+    {
+        cout<<"Testcase Setup"<<endl;
+    }
+
+    void TearDown() override
+    {
+        cout<<"Testcase Teardown"<<endl;
+    }
+};
+
+INSTANTIATE_TEST_SUITE_P( StringCalculatorGroup, StringCalculatorData
+    testing::values(
+        StringCalculatorData{"1,2", 3};
+        StringCalculatorData{"", 0};
+
+    )
+)
+
+TEST_P(StringCalculatorTests, Tests)
+{
+    const auto &data = GetParam();
+    int actualResult = add(data.inpString);
+    EXPECT_EQ(actualResult, data.expectedResult);
+}
