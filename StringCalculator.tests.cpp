@@ -35,11 +35,10 @@ class StringCalculatorTests : public testing::TestWithParam<StringCalculatorData
 
 INSTANTIATE_TEST_SUITE_P( StringCalculatorGroup, StringCalculatorData
     testing::values(
-        StringCalculatorData{"1,2", 3};
-        StringCalculatorData{"", 0};
-
+        StringCalculatorData{"1,2", 3},
+        StringCalculatorData{"", 0}
     )
-)
+);
 
 TEST_P(StringCalculatorTests, Tests)
 {
